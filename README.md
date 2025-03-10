@@ -31,8 +31,8 @@ A simple bug-tracking application built with React, Tailwind CSS, and Express.js
 Clone the repository
 
 ```sh
-git clone https://github.com/your-username/bug-tracker.git
-cd bug-tracker
+git clone https://github.com/PLP-Full-Stack-Development-MERN/week-6-testing-and-debugging-LEAKONO.git
+cd mern-bug-tracker
 ```
 **Install dependencies**
 
@@ -45,7 +45,7 @@ npm run dev
 ```sh
 cd backend
 npm install
-npm start
+node run server.js
 ```
 ###🌟 Usage
 - Open the app in your browser at http://localhost:5000 (default Vite URL).
