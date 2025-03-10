@@ -1,63 +1,74 @@
-**Week 6: Testing and Debugging in MERN Applications**
+## Bug Tracker 🐞
+A simple bug-tracking application built with React, Tailwind CSS, and Express.js for managing and reporting bugs.
 
-**Objective:**
+### 🚀 Features
+- Report Bugs  – Users can submit bug reports with a title and description.
+- View Bug List  – All submitted bugs are displayed in a structured list.
+- Responsive UI – Styled with Tailwind CSS for a clean and modern look.
+- REST API– Communicates with a backend Express.js server.
+###  Project Structure
 
-- Develop a systematic approach to testing and debugging MERN applications.
-- Implement unit, integration, and component tests for both backend and frontend.
-- Identify and resolve issues using debugging tools and techniques.
+📦 bug-tracker  
+├──  public  
+├──  src  
+│   ├── components  
+│   │   ├── BugForm.jsx  
+│   │   ├── BugList.jsx  
+│   │   ├── BugItem.jsx  
+│   ├──  pages  
+│   │   ├── Home.jsx  
+│   ├── App.jsx  
+│   ├── main.jsx  
+├── tailwind.config.js  
+├── postcss.config.js  
+├── package.json  
+├── README.md  
+### Tech Stack
+- **Frontend**: React, Tailwind CSS
+- **Backend**: Express.js, MongoDB (API Endpoint: http://localhost:5000/api/bugs)
+- **HTTP Requests**: Axios
+📦 Installation
+Clone the repository
 
-**Project Suggestion:** Build a "Bug Tracker" application where users can create, update, and track issues in a project. The goal is to integrate testing and debugging best practices to ensure application reliability.
+```sh
+git clone https://github.com/your-username/bug-tracker.git
+cd bug-tracker
+```
+**Install dependencies**
 
-**Instructions:**
+```bash
+npm install
+npm run dev
+```
+**Run the backend (Make sure Express.js server is running)**
 
-1. **Project Setup:**
-   - Create a new project folder called `mern-bug-tracker`.
-   - Set up both backend and frontend environments.
-   - Install necessary dependencies, including testing libraries (Jest, Supertest, React Testing Library).
+```sh
+cd backend
+npm install
+npm start
+```
+###🌟 Usage
+- Open the app in your browser at http://localhost:5000 (default Vite URL).
+- Enter a bug title and description in the form and click "Add Bug".
+- Bugs will appear in the list dynamically.
+### Styling with Tailwind CSS
+Tailwind CSS is used for styling components. Example:
+```sh
+<button className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition duration-300">
+  Add Bug
+</button>
+```
+Ensure Tailwind is configured properly in tailwind.config.js:
 
-2. **Application Features:**
-   - Users should be able to:
-     - Report new bugs by filling out a form.
-     - View a list of all reported bugs.
-     - Update bug statuses (e.g., open, in-progress, resolved).
-     - Delete bugs.
+```sh
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
 
-3. **Testing Requirements:**
-   - **Backend:**
-     - Write unit tests for individual helper functions (e.g., validation logic).
-     - Perform integration tests for API routes (e.g., create, update, delete bug endpoints).
-     - Mock database calls using libraries like `jest-mock`.
-   
-   - **Frontend:**
-     - Write unit tests for components (e.g., form validation, button clicks).
-     - Implement integration tests to verify API calls and UI updates.
-     - Ensure proper rendering of UI elements under different states (e.g., empty list, error message).
-
-4. **Debugging Tasks:**
-   - Introduce intentional bugs in the code and utilize:
-     - Console logs for tracking values.
-     - Chrome DevTools for inspecting network requests and component state.
-     - Node.js inspector for debugging server-side code.
-     - Error boundary implementation for React components.
-
-5. **Error Handling Implementation:**
-   - Implement error handling in the backend using Express middleware.
-   - Add client-side error boundaries to capture and gracefully handle crashes.
-
-6. **Documentation:**
-   - Write a `README.md` file that includes:
-     - How to install and run the project.
-     - Steps to run tests and debugging techniques used.
-     - Explanation of the testing approach and coverage.
-
-7. **Submission:**
-   - Push your code to your GitHub repository.
-
-**Evaluation Criteria:**
-
-- Comprehensive unit and integration tests.
-- Proper test coverage and documentation.
-- Effective use of debugging techniques.
-- Well-structured and maintainable code.
-- Clear and concise error handling implementation.
-
+### License
+This project is open-source and available under the MIT License.
